@@ -1,0 +1,24 @@
+{
+  "name": "2dreact-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "2DReact game library monorepo",
+  "workspaces": [
+    "2DReact",
+    "consumer"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w 2DReact",
+    "dev:consumer": "npm run dev -w consumer",
+    "dev:all": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "build:lib": "npm run build -w 2DReact",
+    "build:consumer": "npm run build -w consumer",
+    "preview": "npm run preview -w consumer",
+    "lint": "npm run lint --workspaces --if-present",
+    "type-check": "npm run type-check --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
